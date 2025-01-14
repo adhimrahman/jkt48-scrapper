@@ -1,12 +1,15 @@
 {
     "version": 2,
     "builds": [
-        {
-            "src": "index.ts",
-            "use": "@vercel/node"
-        }
+        { "src": "api/**/*.{ts,js}", "use": "@vercel/node" }
     ],
     "routes": [
-        { "src": "/(.*)", "dest": "index.ts" }
+        { "src": "/api/birthday", "dest": "/api/birthday/index.ts" },
+        { "src": "/api/member/getAll", "dest": "/api/member/getAll/index.ts" },
+        { "src": "/api/member/getDetail", "dest": "/api/member/getDetail/index.ts" },
+        { "src": "/api/news", "dest": "/api/news/index.ts" },
+        { "src": "/api/schedule/getSchedule", "dest": "/api/schedule/getSchedule/index.ts" },
+        { "src": "/api/schedule/getDetail", "dest": "/api/schedule/getDetail/index.ts" },
+        { "src": "/api/schedule/getTheater", "dest": "/api/schedule/getTheater/index.ts" }
     ]
-}
+}  

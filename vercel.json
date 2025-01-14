@@ -4,12 +4,13 @@
         { "src": "api/**/*.{ts,js}", "use": "@vercel/node" }
     ],
     "routes": [
-        { "src": "/api/birthday", "dest": "/api/birthday/index.ts" },
-        { "src": "/api/member/getAll", "dest": "/api/member/getAll/index.ts" },
-        { "src": "/api/member/getDetail", "dest": "/api/member/getDetail/index.ts" },
-        { "src": "/api/news", "dest": "/api/news/index.ts" },
-        { "src": "/api/schedule/getSchedule", "dest": "/api/schedule/getSchedule/index.ts" },
-        { "src": "/api/schedule/getDetail", "dest": "/api/schedule/getDetail/index.ts" },
-        { "src": "/api/schedule/getTheater", "dest": "/api/schedule/getTheater/index.ts" }
+        { "src": "/api/birthday", "dest": "/api/birthday" },
+        { "src": "/api/member/getAll", "dest": "/api/member/getAll" },
+        { "src": "/api/member/getDetail", "dest": "/api/member/getDetail" },
+        { "src": "/api/news", "dest": "/api/news" },
+        { "src": "/api/schedule/getSchedule", "dest": "/api/schedule/getSchedule" },
+        { "src": "/api/schedule/getDetail", "dest": "/api/schedule/getDetail" },
+        { "src": "/api/schedule/getTheater", "dest": "/api/schedule/getTheater" }
     ]
-}  
+  }
+  

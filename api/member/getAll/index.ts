@@ -10,7 +10,15 @@ export default async (req: VercelRequest, res: VercelResponse) => {
 	try {
 		browser = await launchBrowser();
 		const page: Page = await browser.newPage();
-		await page.goto(`${process.env.URL_SCRAP}/member/list?lang=id`);
+
+		// await page.setDefaultNavigationTimeout(60000);
+		await page.setDefaultNavigationTimeout(120000);
+		// await page.goto(`${process.env.URL_SCRAP}/member/list?lang=id`);
+		// await page.goto("https://example.com/members", { waitUntil: "domcontentloaded" });
+
+		await page.goto(`${process.env.URL_SCRAP}/member/list?lang=id`, {
+			waitUntil: "networkidle2",
+		});		
 
 		const memberData: MemberData[] = await page.evaluate(() => {
 			const url: string = "https://jkt48.com";		

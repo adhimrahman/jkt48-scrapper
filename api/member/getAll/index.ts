@@ -32,6 +32,7 @@ export default async (req: VercelRequest, res: VercelResponse) => {
 		res.status(200).json({ code: 200, result: memberData });
 	} catch (error) {
 		res.status(500).json({ error });
+		console.log("error plsss")
 	} finally {
 		if (browser) await browser.close();
 	}

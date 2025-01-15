@@ -4,6 +4,7 @@
         { "src": "api/**/*.{ts,js}", "use": "@vercel/node" }
     ],
     "routes": [
+        { "src": "/", "dest": "/" },
         { "src": "/api/birthday", "dest": "/api/birthday" },
         { "src": "/api/member/getAll", "dest": "/api/member/getAll" },
         { "src": "/api/member/getDetail", "dest": "/api/member/getDetail" },
